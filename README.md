@@ -4,10 +4,10 @@
 ### <div align="center">I'm Farolan, a full-stack developer 👨‍💻 working remotely since 2017 🚀</div>  
   
 
-- 🔭 I’m currently working on a free voice chat web app  
+- 🔭 I’m currently working on Overmind quests  
   
 
-- 🌱 I’m currently learning Durable Objects   
+- 🌱 I’m currently learning Aptos   
   
 
 - ⚡ Fun fact: I use WSL  
