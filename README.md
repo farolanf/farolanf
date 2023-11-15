@@ -15,6 +15,10 @@
 
 <br/>  
 
+## Trophy
+
+<img src="https://github-profile-trophy.vercel.app/?username=farolanf" />
+
 
 ## My Skill Set  
 <table><tr><td valign="top" width="33%">
