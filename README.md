@@ -7,10 +7,10 @@
 - 🔭 I’m currently working on Overmind quests (help me complete this quest by [joining](https://overmind.xyz/race?r=farolanf))
   
 
-- 🌱 I’m currently learning Aptos   
+- 🌱 I’m currently learning Aptos and Software Architecture
   
 
-- ⚡ Fun fact: I use WSL  
+- ⚡ Fun fact: I use WSL
   
 
 <br/>  
