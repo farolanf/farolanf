@@ -4,8 +4,7 @@
 ### <div align="center">I'm Farolan, a full-stack developer 👨‍💻 working remotely since 2017 🚀</div>  
   
 
-- 🔭 I’m currently working on Overmind quests (help me complete this quest by [joining](https://overmind.xyz/race?r=farolanf))
-  
+- 🔭 I’m currently working on various challenges with prizes
 
 - 🌱 I’m currently learning EOS, Aptos, and Software Architecture
   
