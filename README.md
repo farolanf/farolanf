@@ -9,8 +9,6 @@
 - 🌱 I’m currently learning cool things
   
 
-<br/>  
-
 ## Trophy
 
 <img src="https://github-profile-trophy.vercel.app/?username=farolanf" />
