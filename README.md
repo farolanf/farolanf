@@ -2,12 +2,6 @@
   
 
 ### <div align="center">I'm Farolan, a full-stack developer 👨‍💻 working remotely since 2017 🚀</div>  
-  
-
-- 🔭 I’m currently working on Shopify plugins, challenges, and bounties
-
-- 🌱 I’m currently learning cool things
-  
 
 ## Trophy
 
