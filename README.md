@@ -1,7 +1,7 @@
 ## <div align="center">Hi there!</div>  
   
 
-### <div align="center">I'm Farolan, a full-stack developer 👨‍💻 working remotely since 2017 🚀</div>  
+### <div align="center">I'm Farolan, founding full-stack developer at [sunnie.ai](https://sunnie.ai) 👨‍💻 working remotely since 2017 🚀</div>  
 
 ## Trophy
 
