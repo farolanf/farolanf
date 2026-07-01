@@ -3,6 +3,26 @@
 
 ### <div align="center">I'm a 🚀 Founding Full-Stack Dev 🎩 at a ridiculously awesome startup 🐒</div>  
 
+I build AI-centric systems — and the multi-agent loops that help build them.
+
+Mostly I'm **orchestrating and auditing** rather than hand-coding: I design the
+architecture and the guardrails, then let pipelines do the mechanical work and
+verify everything against real evidence.
+
+**What I work on**
+- 🧠 Ambient & agentic AI — realtime multimodal companions, LLM orchestration,
+  temporal knowledge-graph memory
+- 🦀 Rust for the rigorous core · 🟦 TypeScript on Cloudflare edge ·
+  💎 Rails + deep PostgreSQL · 🐍 Python for LLM services
+- 💳 Production SaaS — billing, credits, subscriptions, the un-fun correctness
+
+**How I work**
+- Clean / Hexagonal architecture by default — misplaced business logic is a bug
+  even when the code works
+- Production-grade or name the blocker — no stubs, no fake-green
+- Root-cause over band-aid · test-locked parity refactors · atomic commits
+- Automate the human out of mechanical loops
+
 ## Trophy
 
 <img src="https://github-profile-trophy.vercel.app/?username=farolanf" />
