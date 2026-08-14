@@ -1,92 +1,61 @@
-## <div align="center">Hi there!</div>  
-  
+# farolanf
 
-### <div align="center">I'm a 🚀 Founding Full-Stack Dev 🎩 at a ridiculously awesome startup 🐒</div>  
+I build small SaaS products, and the machinery that decides which one gets worked
+on next.
 
-I build AI-centric systems — and the multi-agent loops that help build them.
+Mostly I'm not hand-coding any more. I design the architecture and the guardrails,
+then unattended agent sessions do the mechanical work, and nothing counts as done
+until it's verified against real evidence. That green wall below is 5,740
+contributions in twelve months, almost all of them in private repos, and most are
+agent-authored. The volume isn't the interesting part. What's interesting is what
+the guardrails refuse.
 
-Mostly I'm **orchestrating and auditing** rather than hand-coding: I design the
-architecture and the guardrails, then let pipelines do the mechanical work and
-verify everything against real evidence.
+<!-- FLEET-CARD -->
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+          srcset="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-dark.svg?v=20260814">
+  <img alt="fleet stats"
+       src="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-light.svg?v=20260814">
+</picture>
+<!-- /FLEET-CARD -->
 
-**What I work on**
-- 🧠 Ambient & agentic AI — realtime multimodal companions, LLM orchestration,
-  temporal knowledge-graph memory
-- 🦀 Rust for the rigorous core · 🟦 TypeScript on Cloudflare edge ·
-  💎 Rails + deep PostgreSQL · 🐍 Python for LLM services
-- 💳 Production SaaS — billing, credits, subscriptions, the un-fun correctness
+## how I work
 
-**How I work**
-- Clean / Hexagonal architecture by default — misplaced business logic is a bug
-  even when the code works
-- Production-grade or name the blocker — no stubs, no fake-green
-- Root-cause over band-aid · test-locked parity refactors · atomic commits
-- Automate the human out of mechanical loops
+- agents work here unattended, and when something needs my judgment they DM me
+  with the options, so I either tap one or type a direction they didn't offer.
+  we build it together from there, and once it ships it runs its own loop:
+  production errors get filed, fixed and deployed without me in the middle of it,
+  and I come back in only where there's a call to make. destroying data is the
+  one thing they never do alone.
 
-## Trophy
+- coverage is a smoke detector, and one repo-wide number lies in both directions.
+  one product here reads 66.91% overall, which tells you nothing: the domain is
+  gated at 99 and reaches 99.22, the adapters sit at 0 with the reason written
+  beside the exclusion, and each gate is set a little under what the suite
+  actually reaches so it fires on a regression instead of on noise. I started
+  doing it this way after finding 300 passing tests, an architecture guard, and
+  the two rules the product exists for at 13%.
 
-<img src="https://github-profile-trophy.vercel.app/?username=farolanf" />
+- reading a whole file to find one thing is the expensive habit, so I built a
+  grep-able digest of every symbol and the line it sits on. one model file here
+  costs about 26,000 tokens to read, its digest costs 2,900, and the answer to
+  "what runs when this record saves" costs 140. there's no daemon and nothing to
+  remember to re-run: it reconciles against the working tree on every call,
+  because a copy that syncs on a timer is a second source of truth, and between
+  the edit and the sync it answers confidently and wrongly.
 
+- in this loop the products harden over time on their own: an incident produces a
+  rule, the rule gets a test, and every run after that carries it. what's left for
+  me isn't writing the code any more, it's noticing when a hardening stopped at
+  the product it happened in and never travelled, and then making that noticing
+  automatic too.
 
-## My Skill Set  
-<table><tr><td valign="top" width="33%">
+## stack
 
+TypeScript on Cloudflare edge, Rust for the rigorous core, Rails over deep
+PostgreSQL, Python for the LLM services. Production SaaS with the un-fun
+correctness in it: billing, credits, subscriptions, webhooks that fan out.
 
-
-### Frontend  
-<div align="center">  
-<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
-<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
-<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
-<a href="https://www.typescriptlang.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" height="50" /></a>  
-<a href="https://redux.js.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/redux-original.svg" alt="Redux" height="50" /></a>  
-<a href="https://flutter.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/flutterio-icon.svg" alt="Flutter" height="50" /></a>  
-<a href="https://www.tailwindcss.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/tailwindcss.svg" alt="Tailwind CSS" height="50" /></a>  
-<a href="https://sass-lang.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/sass-original.svg" alt="Sass" height="50" /></a>  
-<a href="https://styled-components.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/styled-components.png" alt="Styled Components" height="50" /></a>  
-</div>
-
-</td><td valign="top" width="33%">
-
-
-
-### Backend  
-<div align="center">  
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
-<a href="https://www.typescriptlang.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/typescript-original.svg" alt="TypeScript" height="50" /></a>  
-<a href="https://www.nginx.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="Nginx" height="50" /></a>  
-<a href="https://expressjs.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg" alt="Express.js" height="50" /></a>  
-<a href="https://www.docker.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg" alt="Docker" height="50" /></a>  
-<a href="https://rubyonrails.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/rails-original-wordmark.svg" alt="Ruby on Rails" height="50" /></a>  
-<a href="https://www.postgresql.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg" alt="PostgreSQL" height="50" /></a>  
-<a href="https://redis.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/redis-original-wordmark.svg" alt="Redis" height="50" /></a>  
-<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
-<a href="https://graphql.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/graphql.png" alt="GraphQL" height="50" /></a>  
-<a href="https://www.prisma.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/prisma.png" alt="Prisma" height="50" /></a>  
-<a href="https://www.astro.build/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/astro.svg" alt="Astro" height="50" /></a>  
-</div>
-
-</td><td valign="top" width="33%">
-
-
-
-### DevOps  
-<div align="center">  
-<a href="https://aws.amazon.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="50" /></a>  
-<a href="https://cloud.google.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/google_cloud-icon.svg" alt="GCP" height="50" /></a>  
-<a href="https://www.linux.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" /></a>  
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
-<a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" /></a>  
-<a href="https://azure.microsoft.com/en-in/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/microsoft_azure-icon.svg" alt="Azure" height="50" /></a>  
-</div>
-
-</td></tr></table>  
-
-<br/>  
-
-
-## Connect with me  
 <div align="center">
 <a href="https://github.com/farolanf" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
@@ -102,41 +71,5 @@ verify everything against real evidence.
 </a>
 <a href="https://linkedin.com/in/farolanfaisal" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
-</a>  
-</div>  
-  
-
-<br/>  
-
-
-## Github Stats  
-<div align="center"><img src="https://github-readme-stats.vercel.app/api?username=farolanf&show_icons=true&count_private=true&hide_border=true" align="center" /></div>  
-
-<div align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=farolanf&show_icons=true&locale=en&layout=compact" align="center" /></div>  
-
-<br/>  
-
-<div align="center">
-<img src="https://komarev.com/ghpvc/?username=farolanf&&style=flat-square" align="center" />
-</div>  
-  
-
-<br/>  
-
-<div align="center">
-            <a href="https://paypal.me/farolanf" target="_blank" style="display: inline-block;">
-                <img
-                    src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square&logo=paypal" 
-                    align="center"
-                />
-            </a>
-            <a href="https://www.buymeacoffee.com/farol" target="_blank" style="display: inline-block;">
-                <img
-                    src="https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange.svg?style=flat-square&logo=buymeacoffee" 
-                    align="center"
-                />
-            </a></div>
-<br />
-
-----
-<div align="center">Generated using <a href="https://profilinator.rishav.dev/" target="_blank">Github Profilinator</a></div>
+</a>
+</div>
