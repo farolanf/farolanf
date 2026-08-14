@@ -1,0 +1,17 @@
+{
+  "name": "farolanf-profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GitHub profile README and the generator for its fleet stats card",
+  "scripts": {
+    "stats": "node scripts/stats.mjs",
+    "stats:dry": "node scripts/stats.mjs --dry-run",
+    "test": "vitest run",
+    "verify": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.0.0",
+    "vitest": "^3.0.0"
+  }
+}
