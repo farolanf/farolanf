@@ -40,15 +40,15 @@ describe('toModel', () => {
   it('says what was measured and from when, so the counter is a fact and not a guess', () => {
     const model = toModel(readings)
 
-    expect(model.countersNote).toBe('authored across 69 repos since 2022-09-07')
-    expect(model.tokensNote).toBe('all-time since 2026-03-19, across three coding agents')
+    expect(model.countersNote).toBe('Authored across 69 repos since 2022-09-07')
+    expect(model.tokensNote).toBe('All-time since 2026-03-19, across three coding agents')
   })
 
   it('keeps written and processed under labels that hold them apart', () => {
     const model = toModel(readings)
 
-    expect(model.tokenCounters[0].label).toBe('tokens written')
-    expect(model.tokenCounters[1].label).toBe('tokens processed')
+    expect(model.tokenCounters[0].label).toBe('Tokens written')
+    expect(model.tokenCounters[1].label).toBe('Tokens processed')
   })
 })
 
