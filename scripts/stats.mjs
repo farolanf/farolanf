@@ -16,7 +16,7 @@ import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { render, toModel, toShields } from '../src/card.mjs'
-import { readCommits } from '../src/commits.mjs'
+import { IDENTITIES, readCommits } from '../src/commits.mjs'
 import { emptyLedger, reconcile, totals } from '../src/ledger.mjs'
 import { readClaude } from '../src/sources/claude.mjs'
 import { extractSessionUsage, readCodex } from '../src/sources/codex.mjs'
@@ -124,12 +124,25 @@ function liveProductCount() {
   return (text.match(/status:\s*'live'/g) ?? []).length
 }
 
+/**
+ * GitHub's own 12-month total, minus this repo's own commits in that window.
+ *
+ * The subtraction is the same rule commitReading applies, and for the same
+ * reason: every push this script makes is itself a contribution, so counting
+ * them makes the run self-feeding — the card moves because the card was
+ * published, and it would commit once per run forever.
+ */
 function contributionCount() {
   const query =
     '{viewer{contributionsCollection{contributionCalendar{totalContributions}}}}'
   const out = sh('gh', ['api', 'graphql', '-f', `query=${query}`, '--jq',
     '.data.viewer.contributionsCollection.contributionCalendar.totalContributions'])
-  return out === null ? 0 : num(out.trim())
+  if (out === null) return 0
+
+  const own = sh('git', ['-C', REPO, 'log', '--since=365.days', '--format=%ae'])
+  const mine = own === null ? 0 : own.split('\n').filter((e) => IDENTITIES.includes(e)).length
+
+  return Math.max(0, num(out.trim()) - mine)
 }
 
 // ---------------------------------------------------------------- helpers
