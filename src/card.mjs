@@ -7,9 +7,16 @@
  * session id to travel through, so the public card cannot leak one even if a
  * future source starts carrying them.
  *
- * Two SVGs rather than one with a media query: GitHub proxies images through
- * camo, and a `prefers-color-scheme` block inside a single SVG does not survive
- * it. `<picture>` with a `media` source does.
+ * Two SVGs rather than one carrying a `prefers-color-scheme` block. An SVG
+ * loaded through `<img>` is an independent document: the media query inside it
+ * answers to the OPERATING SYSTEM's setting, not to the GitHub theme the reader
+ * actually chose, so a light-mode-on-a-dark-OS visitor gets the wrong card.
+ * `<picture>` with a `media` source is resolved by the host page and follows the
+ * theme GitHub is rendering.
+ *
+ * Verified 2026-08-14: unlike external hosts, raw.githubusercontent.com is NOT
+ * proxied through camo — the profile page links these SVGs directly, with
+ * `cache-control: max-age=300`.
  */
 
 const THEMES = {

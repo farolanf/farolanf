@@ -91,6 +91,14 @@ function commitReading(asOf) {
     if (!entry.isDirectory()) continue
     const repo = join(PROJECTS, entry.name)
     if (!existsSync(join(repo, '.git'))) continue
+    /**
+     * This repo does not count itself. Every commit in it is either the profile
+     * copy or this script's own daily card refresh, which is bookkeeping about
+     * the work rather than the work. Counting it also makes the run self-feeding:
+     * the refresh commit moves the count, which guarantees the next run sees a
+     * change and commits again, so "no commit on a quiet day" would never hold.
+     */
+    if (repo === REPO) continue
 
     // No --author here on purpose: the identity filter lives in src/commits.mjs
     // where it is unit-testable, and this only fetches.
@@ -252,7 +260,13 @@ if (!changed) {
   process.exit(0)
 }
 
-// Only the cache-buster inside the fence moves; nothing else in the README is touched.
+/**
+ * Only the cache-buster inside the fence moves; nothing else in the README is
+ * touched. raw.githubusercontent.com serves these SVGs directly (no camo) with
+ * `cache-control: max-age=300`, so the stamp is not load-bearing for a daily
+ * refresh — it is what makes an out-of-band run visible immediately instead of
+ * up to five minutes later.
+ */
 const readmePath = join(REPO, 'README.md')
 const readme = readFileSync(readmePath, 'utf8')
 const restamped = readme.replace(
