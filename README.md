@@ -13,9 +13,9 @@ the guardrails refuse.
 <!-- FLEET-CARD -->
 <picture>
   <source media="(prefers-color-scheme: dark)"
-          srcset="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-dark.svg?v=20260901">
+          srcset="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-dark.svg?v=20260902">
   <img alt="fleet stats"
-       src="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-light.svg?v=20260901">
+       src="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-light.svg?v=20260902">
 </picture>
 <!-- /FLEET-CARD -->
 
