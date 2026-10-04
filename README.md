@@ -5,10 +5,9 @@ on next.
 
 Mostly I'm not hand-coding any more. I design the architecture and the guardrails,
 then unattended agent sessions do the mechanical work, and nothing counts as done
-until it's verified against real evidence. That green wall below is 5,740
-contributions in twelve months, almost all of them in private repos, and most are
-agent-authored. The volume isn't the interesting part. What's interesting is what
-the guardrails refuse.
+until it's verified against real evidence. That green wall below is almost all
+private repos, and most of it is agent-authored. The volume isn't the interesting
+part. What's interesting is what the guardrails refuse.
 
 <!-- FLEET-CARD -->
 <picture>
@@ -60,10 +59,10 @@ correctness in it: billing, credits, subscriptions, webhooks that fan out.
 <a href="https://github.com/farolanf" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
-<a href="https://twitter.com/farolanfaisal" target="_blank">
-<img src=https://img.shields.io/badge/twitter-%2300acee.svg?&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
+<a href="https://x.com/farolanfaisal" target="_blank">
+<img src=https://img.shields.io/badge/x-%23000000.svg?&style=for-the-badge&logo=x&logoColor=white alt=x style="margin-bottom: 5px;" />
 </a>
-<a href="https://codepen.com/farolan" target="_blank">
+<a href="https://codepen.io/farolan" target="_blank">
 <img src=https://img.shields.io/badge/codepen-%23131417.svg?&style=for-the-badge&logo=codepen&logoColor=white alt=codepen style="margin-bottom: 5px;" />
 </a>
 <a href="https://stackoverflow.com/users/5790048/farolan-faisal" target="_blank">
