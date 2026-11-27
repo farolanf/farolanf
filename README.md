@@ -12,9 +12,9 @@ part. What's interesting is what the guardrails refuse.
 <!-- FLEET-CARD -->
 <picture>
   <source media="(prefers-color-scheme: dark)"
-          srcset="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-dark.svg?v=20261126">
+          srcset="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-dark.svg?v=20261127">
   <img alt="fleet stats"
-       src="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-light.svg?v=20261126">
+       src="https://raw.githubusercontent.com/farolanf/farolanf/main/stats/fleet-light.svg?v=20261127">
 </picture>
 <!-- /FLEET-CARD -->
 
